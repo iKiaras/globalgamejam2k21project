@@ -9,10 +9,13 @@ public class DanceGamePlayerInfo : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private Text elliesText;
     [SerializeField] private Text carlsText;
+    [SerializeField] private AudioSource intro;
+    [SerializeField] private AudioSource song;
     private bool elliesTextShown = false;
     private bool carlsTextShown = false;
-    
+    private bool isLoopPlaying = false;
     private static int score = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +27,17 @@ public class DanceGamePlayerInfo : MonoBehaviour
     {
         scoreText.text = score.ToString();
         checkText();
+        checkLoop();
+        
+    }
+
+    private void checkLoop()
+    {
+        if (!intro.isPlaying && !isLoopPlaying)
+        {
+            song.Play();
+            isLoopPlaying = true;
+        }
     }
 
     private void checkText()
