@@ -49,7 +49,6 @@ public class PlayerController : MonoBehaviour
             _animator.SetFloat("moveX", _rigidbody2D.velocity.x);
             _animator.SetFloat("moveY", _rigidbody2D.velocity.y);
         }
-
         if (canMove)
         {
             if (Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Horizontal") == -1 ||
@@ -62,9 +61,7 @@ public class PlayerController : MonoBehaviour
             }
             transform.position = new Vector3(Mathf.Clamp(transform.position.x, bottomLeftLimit.x, topRightLimit.x),
                 Mathf.Clamp(transform.position.y, bottomLeftLimit.y, topRightLimit.y), transform.position.z);
-        }
-
-        
+        }       
     }
 
     public void SetBounds(Vector3 newBottomLeftLimit, Vector3 newTopRightLimit)
