@@ -11,15 +11,19 @@ public class DanceGamePlayerInfo : MonoBehaviour
     [SerializeField] private Text carlsText;
     [SerializeField] private AudioSource intro;
     [SerializeField] private AudioSource song;
+    [SerializeField] private GameObject winPanel;
+    [SerializeField] private GameObject lossPanel;
     private bool elliesTextShown = false;
     private bool carlsTextShown = false;
     private bool isLoopPlaying = false;
     private static int score = 0;
+    public static bool lost = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        score = 0;
+        lost = false;
     }
 
     // Update is called once per frame
@@ -153,5 +157,19 @@ public class DanceGamePlayerInfo : MonoBehaviour
     public static void AddScore()
     {
         score+=10;
+    }
+
+    private void checkWinCondition()
+    {
+        if (lost)
+        {
+            song.Stop();
+            lossPanel.SetActive(true);
+        }
+
+        if (score >= 720)
+        {
+            winPanel.SetActive(true);
+        }
     }
 }
