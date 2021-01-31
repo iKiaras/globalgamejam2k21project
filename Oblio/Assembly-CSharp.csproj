@@ -50,10 +50,15 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\FireworkGamePlayerInfo.cs" />
      <Compile Include="Assets\Scripts\UIFader.cs" />
      <Compile Include="Assets\Scripts\DanceMoveActivator.cs" />
+     <Compile Include="Assets\Scripts\PuzzleGame.cs" />
+     <Compile Include="Assets\Scripts\ColorChange.cs" />
      <Compile Include="Assets\Scripts\Notes.cs" />
+     <Compile Include="Assets\Scripts\FireworkScript.cs" />
      <Compile Include="Assets\Scripts\DialogManager.cs" />
+     <Compile Include="Assets\Scripts\PuzzleGameManager.cs" />
      <Compile Include="Assets\Scripts\AreaEntrance.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\AreaExit.cs" />
@@ -67,11 +72,6 @@
      <Compile Include="Assets\Scripts\ItemButton.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\GameMenu.cs" />
-     <Compile Include="Assets\Scripts\FireworkScript.cs" />
-     <Compile Include="Assets\Scripts\FireworkGamePlayerInfo.cs" />
-     <Compile Include="Assets\Scripts\ColorChange.cs" />
-     <Compile Include="Assets\Scripts\PuzzleGame.cs" />
-     <Compile Include="Assets\Scripts\PuzzleGameManager.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

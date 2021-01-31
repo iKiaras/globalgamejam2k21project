@@ -38,5 +38,10 @@ public class FireworkScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (gameObject.transform.position.y > 6.60f)
+        {
+            Destroy(gameObject);
+        }
     }
 }
