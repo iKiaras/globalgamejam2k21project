@@ -9,18 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/StartingScene.unity
     guid: c56e733eff961244ba215a0c32ffb73b
   - enabled: 1
+    path: Assets/Scenes/HospitalScene.unity
+    guid: e8462f91e47695d49b7065429f806f47
+  - enabled: 1
     path: Assets/Scenes/MiniGameMenu.unity
     guid: 0252e8dfa48fccf47b92a70a2f577b5f
   - enabled: 1
-    path: Assets/Scenes/HospitalScene.unity
-    guid: e8462f91e47695d49b7065429f806f47
+    path: Assets/Scenes/DanceMiniGame.unity
+    guid: beeb81760ff5cf54b8955369791c9f56
   - enabled: 1
     path: Assets/Scenes/FireworksScene.unity
     guid: 3f7257347a169f34e81de4951ad71250
   - enabled: 1
     path: Assets/Scenes/DeathScene.unity
     guid: a605ab897e05e764bb2ec02f5be3fa67
-  - enabled: 1
-    path: Assets/Scenes/DanceMiniGame.unity
-    guid: beeb81760ff5cf54b8955369791c9f56
   m_configObjects: {}
