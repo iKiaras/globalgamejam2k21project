@@ -850,15 +850,12 @@ MonoBehaviour:
   selected: 0
   title: {fileID: 0}
   destription: {fileID: 416291293}
-  titles:
-  - 
-  - 
-  - 
   descriptions:
   - This dance seems so familiar. I guess its in Vegas. Lets move up and down to
     the rythm.
   - Clicked me right away. Very familiar, like the smell of soap.
   - This makes me confused. I can't find the right order.
+  sceneTransitioning: 0
 --- !u!1 &1320299733
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,7 +942,6 @@ GameObject:
   - component: {fileID: 1390015653}
   - component: {fileID: 1390015656}
   - component: {fileID: 1390015655}
-  - component: {fileID: 1390015654}
   m_Layer: 5
   m_Name: Image (1)
   m_TagString: Untagged
@@ -973,24 +969,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 350, y: 356}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1390015654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1390015652}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a4184153615c334d9ec404348acae19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  images: []
-  selected: 0
-  title: {fileID: 0}
-  destription: {fileID: 0}
-  titles: []
-  descriptions: []
 --- !u!114 &1390015655
 MonoBehaviour:
   m_ObjectHideFlags: 0

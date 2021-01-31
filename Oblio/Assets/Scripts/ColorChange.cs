@@ -12,11 +12,9 @@ public class ColorChange : MonoBehaviour
     public TextMeshProUGUI title;
     public TextMeshProUGUI destription;
     [SerializeField]
-    private string[] titles;
-    [SerializeField]
     private string[] descriptions;
 
-    private bool sceneTransitioning = false;
+    public bool sceneTransitioning = false;
     public void Start()
     {
         images[0].color = Color.blue;
@@ -29,34 +27,30 @@ public class ColorChange : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
             {
-                selected += 1;
+                selected += 1;        
+                if(selected < 1)
+                {
+                    selected = 3; 
+                }
+                if(selected > 3)
+                {
+                    selected = 1;
+                }
                 Change();
-                if(selected >= 1)
-                {
-                    selected = 1; 
-                    Change();
-                }
-                if(selected <= 3)
-                {
-                    selected = 3;
-                    Change();
-                }
             
             }
             if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
             {
-                selected -= 1;
-                Change();
-                if(selected >= 1)
-                {
-                    selected = 1; 
-                    Change();
-                }
-                if(selected <= 3)
+                selected -= 1;               
+                if(selected < 1 )
                 {
                     selected = 3;
-                    Change();
-                }                 
+                }               
+                if(selected > 3)
+                {
+                    selected = 1;
+                }
+                Change();
             }
         
             if(Input.GetKeyDown(KeyCode.Space))
@@ -93,8 +87,7 @@ public class ColorChange : MonoBehaviour
             images[0].color = Color.blue;
             images[1].color = Color.red;
             images[2].color = Color.red;
-            destription.text = descriptions[0];
-            title.text = titles[0];                
+            destription.text = descriptions[0];    
         }
         if (selected == 2)
         {
@@ -102,7 +95,6 @@ public class ColorChange : MonoBehaviour
             images[0].color = Color.red;
             images[2].color = Color.red;
             destription.text = descriptions[1];
-            title.text = titles[1];
         }
         if (selected == 3)
         {
@@ -110,8 +102,6 @@ public class ColorChange : MonoBehaviour
             images[0].color = Color.red;
             images[1].color = Color.red;
             destription.text = descriptions[2];
-            title.text = titles[2];
-            selected = 0;
         }        
     }
 }
