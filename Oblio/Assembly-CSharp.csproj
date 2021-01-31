@@ -51,28 +51,19 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\FireworkGamePlayerInfo.cs" />
-     <Compile Include="Assets\Scripts\UIFader.cs" />
      <Compile Include="Assets\Scripts\DanceMoveActivator.cs" />
      <Compile Include="Assets\Scripts\PuzzleGame.cs" />
      <Compile Include="Assets\Scripts\ColorChange.cs" />
      <Compile Include="Assets\Scripts\Notes.cs" />
      <Compile Include="Assets\Scripts\FireworkScript.cs" />
-     <Compile Include="Assets\Scripts\DialogManager.cs" />
      <Compile Include="Assets\Scripts\PuzzleGameManager.cs" />
-     <Compile Include="Assets\Scripts\AreaEntrance.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
-     <Compile Include="Assets\Scripts\AreaExit.cs" />
-     <Compile Include="Assets\Scripts\EssentialsLoader.cs" />
-     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\DialogActivator.cs" />
      <Compile Include="Assets\Scripts\PlayerLoader.cs" />
      <Compile Include="Assets\Scripts\SceneManaging.cs" />
-     <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\DanceGamePlayerInfo.cs" />
      <Compile Include="Assets\Scripts\CharacterStats.cs" />
-     <Compile Include="Assets\Scripts\ItemButton.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\GameMenu.cs" />
      <Compile Include="Assets\Scripts\PlayerController2.cs" />
      <Compile Include="Assets\Scripts\TouchRotate.cs" />
      <Compile Include="Assets\Scripts\PuzzleControl.cs" />
