@@ -1113,37 +1113,29 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "1. Pulp Fiction Dance Scene \u2013 Dance with his wife, the first time
-    they say I love you. Guitar Hero\r\nSimilar Game.\r\n2. Fight Club Ending Scene
-    \u2013 New years eve. His wife announces her pregnancy and that she is\r\nworried
-    about having kids. He reassures her, they are holding hands watching the fireworks
-    (Mini\r\ngame applied)\r\n3. Star Wars Scene \u2013 Hospital, his wife is terminally
-    ill. Stormtroopers represent the doctors and the\r\nnursers (They all wear white)
-    and Darth Vader represents death. The sound of Darth Vader breathing\r\nrepresents
-    breathing out of the ER oxygen mask. (Mini game applied)\r\n1. Dance Scene\r\nHer:
-    Who would imagine that you are such a good dancer.\r\nHim: There are many things
-    you don't know about me!\r\nHer: Oh am I? I really hope that are at least good.\r\nHim:
-    They will be the best!\r\nHer: I hope this dance lasts forever!\r\nHim: Me too,
-    or until I feel excruciating pain from my feet, which I think it will be in the\r\nnext
-    10 minutes.\r\nThey both laugh.\r\nHim: I'll tell you what, we will do a magic
-    trick.\r\nHer: Oh I love magic tricks! Tell me!\r\nHim: We will close our eyes
-    and we will hardwire this memory to our brains, in this way as\r\nlong as we
-    are alive we can live this moment again and again!\r\nHer: \u2026. I love you...\r\nHim:
-    I love you too....\r\n2. New Years Eve Scene\r\nBoth: 3,2,1... HAPPY NEW YEAR\r\nHim:
-    Happy new year baby!\r\nHer: Happy new year... baby... I have something to tell
-    you...\r\nHim: What is it?\r\nHer: I don't know if I can say it...\r\nHim: What
-    is it? I am getting worried...\r\nHer: I am pregnant...\r\nHim: What?? Really???\r\nHer:
-    Yeah, really... And I am scared.\r\nHim: That's great news!!\r\nHer: No they
-    are not... I don't know if we can make it through!\r\nHim: Trust me, everything
-    is gonna be fine.\r\n3. Hospital Death Scene (Stages of grief)\r\nI know you
-    are going to be fine, I know it. You would never do that to me, right? No, you\r\nwouldn't.
-    You promised you would be fine. (Denial)\r\nYou know how mad I get when you lie
-    to me! So you better keep your promise or I will be\r\nfurious, in a really bad
-    way! (Anger)\r\nPlease answer me. At least nod. Please, I miss you. A small nod,
-    or move your finger and I\r\nwill be fine. (Bargaining)\r\nPlease I can't do
-    it without you. I am a joke, how am I supposed to live without you? I can't\r\neven
-    find the power to get off the bed... (Depression)\r\nI love you, I will always
-    love you. I will always be with you... (Acceptance)"
+  m_text: "1. Dance Scene\r\nEllie: Who would imagine that you are such a good dancer.\r\nCarl:
+    TElliee are many things you don't know about me!\r\nEllie: Oh am I? I really
+    hope that are at least good.\r\nCarl: They will be the best!\r\nEllie: I hope
+    this dance lasts forever!\r\nCarl: Me too, or until I feel excruciating pain
+    from my feet, which I think it will be in the\r\nnext 10 minutes.\r\nThey both
+    laugh.\r\nCarl: I'll tell you what, we will do a magic trick.\r\nEllie: Oh I
+    love magic tricks! Tell me!\r\nCarl: We will close our eyes and we will hardwire
+    this memory to our brains, in this way as\r\nlong as we are alive we can live
+    this moment again and again!\r\nEllie: \u2026. I love you...\r\nCarl: I love
+    you too....\r\n\n2. New Years Eve Scene\r\nBoth: 3,2,1... HAPPY NEW YEAR\r\nCarl:
+    Happy new year baby!\r\nEllie: Happy new year... baby... I have something to
+    tell you...\r\nCarl: What is it?\r\nEllie: I don't know if I can say it...\r\nCarl:
+    What is it? I am getting worried...\r\nEllie: I am pregnant...\r\nCarl: What??
+    Really???\r\nEllie: Yeah, really... And I am scared.\r\nCarl: That's great news!!\r\nEllie:
+    No they are not... I don't know if we can make it through!\r\nCarl: Trust me,
+    everything is gonna be fine.\r\n\n3. Hospital Death Scene\nI know you are going
+    to be fine, I know it. You would never do that to me, right? No, you\r\nwouldn't.
+    You promised you would be fine. \nYou know how mad I get when you lie to me!
+    So you better keep your promise or I will be\r\nfurious, in a really bad way!
+    \nPlease answer me. At least nod. Please, I miss you. A small nod, or move your
+    finger and I\r\nwill be fine. \nPlease I can't do it without you. I am a joke,
+    how am I supposed to live without you? I can't\r\neven find the power to get
+    off the bed... \nI love you, I will always love you. I will always be with you..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
