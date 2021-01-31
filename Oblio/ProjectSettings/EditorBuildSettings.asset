@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/MiniGameMenu.unity
+    guid: 0252e8dfa48fccf47b92a70a2f577b5f
   - enabled: 1
-    path: Assets/Scenes/SampleScene2.unity
-    guid: c3f59d7c2b3964246b61112e6706045e
+    path: Assets/Scenes/DanceMiniGame.unity
+    guid: beeb81760ff5cf54b8955369791c9f56
   - enabled: 1
-    path: Assets/Scenes/Countryside.unity
-    guid: d8f2649858289c44583d91c8effbca4c
+    path: Assets/Scenes/DeathScene.unity
+    guid: a605ab897e05e764bb2ec02f5be3fa67
   - enabled: 1
-    path: Assets/Scenes/Countryside2.unity
-    guid: 22e088d7bd3aba34f97f0d007e4a05f7
+    path: Assets/Scenes/FireworksScene.unity
+    guid: 3f7257347a169f34e81de4951ad71250
   m_configObjects: {}

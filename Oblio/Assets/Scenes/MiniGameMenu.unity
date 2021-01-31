@@ -550,8 +550,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -119}
-  m_SizeDelta: {x: 1117.426, y: 274.85907}
+  m_AnchoredPosition: {x: 0, y: 1.5853}
+  m_SizeDelta: {x: 893.4895, y: 131.28687}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &416291293
 MonoBehaviour:
@@ -600,15 +600,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -636,7 +636,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 108.425156, y: 0, z: 106.64774, w: 138.64197}
+  m_margin: {x: -0.54869217, y: 3.1586719, z: 3.9913552, w: -0.33913246}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -848,13 +848,14 @@ MonoBehaviour:
   - {fileID: 1390015655}
   - {fileID: 230018934}
   selected: 0
-  clicks:
-  - {fileID: 8300000, guid: 8703860c063faeb46a8a7f4b187162e0, type: 3}
-  - {fileID: 8300000, guid: 74c9708e92f6b694c9f9082922dcc22f, type: 3}
-  - {fileID: 8300000, guid: 993685096e75b544186bf437fa456a94, type: 3}
-  - {fileID: 8300000, guid: 428ba132272715d4d9b279f77786ce96, type: 3}
-  source: {fileID: 1474496377}
+  title: {fileID: 0}
   destription: {fileID: 0}
+  titles: []
+  descriptions: []
+  scenes:
+  - DanceMiniGame
+  - DeathScene
+  - FireworksScene
 --- !u!1 &1320299733
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,9 +984,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   images: []
   selected: 0
-  clicks: []
-  source: {fileID: 0}
+  title: {fileID: 0}
   destription: {fileID: 0}
+  titles: []
+  descriptions: []
+  scenes: []
 --- !u!114 &1390015655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1377,7 +1380,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 0.82
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &2086286107
 CanvasRenderer:
   m_ObjectHideFlags: 0

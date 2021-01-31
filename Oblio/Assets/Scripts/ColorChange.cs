@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 public class ColorChange : MonoBehaviour
 {
     public Image[] images;
@@ -11,8 +12,13 @@ public class ColorChange : MonoBehaviour
     public TextMeshProUGUI destription;
     [SerializeField]
     private string[] titles;
+    [Header("Put descriptions here")]
     [SerializeField]
     private string[] descriptions;
+    [Header("Scenes here")]
+    [SerializeField]
+    public string[] scenes;
+
     public void Start()
     {
         images[0].color = Color.blue;
@@ -51,7 +57,28 @@ public class ColorChange : MonoBehaviour
                 Change();
             }                 
         }
-    }
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            if(selected == 1)
+            {
+                SceneManager.LoadScene(scenes[0] , LoadSceneMode.Single);
+                GameManager.getInstance().SceneTransitionStarted();
+                UIFader.getInstance().fadeToBlack();                
+            }
+            if(selected == 2)
+            {
+                SceneManager.LoadScene(scenes[1] , LoadSceneMode.Single);
+                GameManager.getInstance().SceneTransitionStarted();
+                UIFader.getInstance().fadeToBlack();                
+            }
+            if(selected == 3)
+            {
+                SceneManager.LoadScene(scenes[2] , LoadSceneMode.Single);
+                GameManager.getInstance().SceneTransitionStarted();
+                UIFader.getInstance().fadeToBlack();                
+            }
+        }
+    }    
     public void Change()
     {
         if (selected == 1)

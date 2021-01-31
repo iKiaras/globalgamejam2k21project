@@ -11,17 +11,17 @@ public class EssentialsLoader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         if (UIFader.getInstance() == null)
         {
             UIFader.setInstance(Instantiate(UIScreen).GetComponent<UIFader>());
         }
-
+        
         if (PlayerController.getInstance() == null)
         {
             PlayerController clone = Instantiate(Player).GetComponent<PlayerController>();
             PlayerController.setInstance(clone);
-        }
-
+        }       
         if (GameManager.getInstance() == null)
         {
             Instantiate(GameManagerInstance);

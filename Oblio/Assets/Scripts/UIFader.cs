@@ -7,7 +7,7 @@ public class UIFader : MonoBehaviour
 {
 
     [SerializeField] private Image fadeScreen;
-    [SerializeField] private float fadeSpeed;
+    [SerializeField] private float fadeSpeed = 10f;
 
     private static UIFader instance;
     private bool shouldFadeToBlack = false;
