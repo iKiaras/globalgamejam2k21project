@@ -28,9 +28,11 @@
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerController2.cs" t="Include" />
           <e p="PlayerLoader.cs" t="Include" />
+          <e p="PuzzleControl.cs" t="Include" />
           <e p="PuzzleGame.cs" t="Include" />
           <e p="PuzzleGameManager.cs" t="Include" />
           <e p="SceneManaging.cs" t="Include" />
+          <e p="TouchRotate.cs" t="Include" />
           <e p="UIFader.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
