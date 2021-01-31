@@ -9,6 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/StartingScene.unity
     guid: c56e733eff961244ba215a0c32ffb73b
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/DanceMiniGame.unity
     guid: beeb81760ff5cf54b8955369791c9f56
+=======
+    path: Assets/Scenes/HospitalScene.unity
+    guid: e8462f91e47695d49b7065429f806f47
+  - enabled: 1
+    path: Assets/Scenes/MiniGameMenu.unity
+    guid: 0252e8dfa48fccf47b92a70a2f577b5f
+>>>>>>> 0ad1e0d9a6ecf68d969b98e9c1610c78d923c17d
   m_configObjects: {}

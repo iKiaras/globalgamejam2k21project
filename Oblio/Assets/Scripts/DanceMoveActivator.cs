@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class DanceMoveActivator : MonoBehaviour
 {
     [SerializeField] private KeyCode key;
+    [SerializeField] private KeyCode alternativeKey;
     [SerializeField] private bool createMode;
     [SerializeField] private GameObject note;
     private Color oldColor;
@@ -26,19 +27,19 @@ public class DanceMoveActivator : MonoBehaviour
     {
         if (createMode)
         {
-            if (Input.GetKeyDown(key))
+            if (Input.GetKeyDown(key) || Input.GetKeyDown(alternativeKey))
             {
                 Instantiate(note, transform.position, Quaternion.identity);
             }
         }
         else
         {
-            if (Input.GetKeyDown(key))
+            if (Input.GetKeyDown(key) || Input.GetKeyDown(alternativeKey))
             {
                 StartCoroutine(Pressed());
             }
         
-            if (Input.GetKeyDown(key) && active)
+            if ((Input.GetKeyDown(key) || Input.GetKeyDown(alternativeKey)) && active)
             {
                 Destroy(note);
                 DanceGamePlayerInfo.AddScore();

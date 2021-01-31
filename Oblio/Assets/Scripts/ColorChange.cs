@@ -15,13 +15,34 @@ public class ColorChange : MonoBehaviour
     private string[] titles;
     [SerializeField]
     private string[] descriptions;
-
+    private bool firstStageClear = false;
+    private bool secondStageClear= false;
+    private bool thirdStageClear = false;
     private bool sceneTransitioning = false;
     public void Start()
     {
         images[0].color = Color.blue;
         selected = 1;
         destription.text = descriptions[0];
+        if (PlayerPrefs.GetInt("firstStageClear") == 1)
+        {
+            firstStageClear = true;
+        }
+        else
+        {
+            images[1].color = Color.black;
+        }
+        
+        if (PlayerPrefs.GetInt("secondStageClear") == 1)
+        {
+            secondStageClear = true;
+        }
+        else
+        {
+            images[2].color = Color.black;
+
+        }
+        
     }
     public void Update()
     {
@@ -68,14 +89,14 @@ public class ColorChange : MonoBehaviour
                     // GameManager.getInstance().SceneTransitionStarted();
                     // UIFader.getInstance().fadeToBlack();                
                 }
-                if(selected == 2)
+                if(selected == 2 && firstStageClear)
                 {
                     sceneTransitioning = true;
                     SceneManager.LoadScene("FireworksScene" , LoadSceneMode.Single);
                     // GameManager.getInstance().SceneTransitionStarted();
                     // UIFader.getInstance().fadeToBlack();                
                 }
-                if(selected == 3)
+                if(selected == 3 && secondStageClear)
                 {
                     sceneTransitioning = true;
                     SceneManager.LoadScene("DeathScene" , LoadSceneMode.Single);
