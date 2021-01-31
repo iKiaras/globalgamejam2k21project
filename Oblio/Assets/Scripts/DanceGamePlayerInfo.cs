@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DanceGamePlayerInfo : MonoBehaviour
@@ -171,5 +172,15 @@ public class DanceGamePlayerInfo : MonoBehaviour
         {
             winPanel.SetActive(true);
         }
+    }
+
+    public void returnToMenu()
+    {
+        SceneManager.LoadScene("MiniGameMenu" , LoadSceneMode.Single);
+    }
+
+    public void restartScene()
+    {
+        SceneManager.LoadScene("DanceMiniGame" , LoadSceneMode.Single);
     }
 }
