@@ -23,7 +23,7 @@ public class FireworkScript : MonoBehaviour
         _rigidbody2D.velocity = new Vector2(0,Random.Range(3,6));
     }
 
-    public void explode()
+    public void OnMouseDown()
     {
         _animator.SetTrigger("Explode");
         _rigidbody2D.velocity = new Vector2(0,0);
@@ -35,6 +35,11 @@ public class FireworkScript : MonoBehaviour
     void Update()
     {
         if (exploded && _animator.GetCurrentAnimatorStateInfo(0).IsName("End"))
+        {
+            Destroy(gameObject);
+        }
+
+        if (gameObject.transform.position.y > 6.60f)
         {
             Destroy(gameObject);
         }

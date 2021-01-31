@@ -5,10 +5,13 @@ using UnityEngine;
 
 public class PuzzleGame : MonoBehaviour
 {
+    [HideInInspector]
     public bool clicked = false;
+    [HideInInspector]
     public bool moved = false;
     [HideInInspector]
     public bool goLeft,goRight,goUp, goDown;
+    [HideInInspector]
     public Vector2 moveAmount;
 
     // Start is called before the first frame update

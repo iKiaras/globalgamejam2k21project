@@ -14,7 +14,7 @@ public class PuzzleGameManager : MonoBehaviour
     [SerializeField] private LayerMask collisionMask;
     private Ray rayUp,rayDown, rayLeft,rayRight;
     private RaycastHit hit;
-    private BoxCollider2D _collider;
+    private BoxCollider _collider;
     private Vector3 colliderSize;
     private Vector3 colliderCenter;
     
@@ -91,17 +91,17 @@ public class PuzzleGameManager : MonoBehaviour
 
             if (puzzle.clicked)
             {
-                _collider = puzzle.GetComponent<BoxCollider2D>();
+                _collider = puzzle.GetComponent<BoxCollider>();
                 colliderSize = _collider.size;
-                colliderCenter = _collider.bounds.center;
+                colliderCenter = _collider.center;
 
                 float moveAmount = offset.x;
                 float direction = Mathf.Sign(moveAmount);
 
                 float x = (puzzle.transform.position.x + colliderCenter.x - colliderSize.x / 2) +
                           colliderSize.x / 2;
-                float yUp = puzzle.transform.position.y + colliderCenter.y + (colliderSize.y / 2 * direction);
-                float yDown = puzzle.transform.position.y + colliderCenter.y + (colliderSize.y / 2 * -direction);
+                float yUp = puzzle.transform.position.y + colliderCenter.y + colliderSize.y / 2 * direction;
+                float yDown = puzzle.transform.position.y + colliderCenter.y + colliderSize.y / 2 * -direction;
                 
                 rayUp = new Ray(new Vector2(x, yUp), new Vector2(0, direction));
                 rayDown = new Ray(new Vector2(x, yDown), new Vector2(0, -direction));
@@ -112,8 +112,8 @@ public class PuzzleGameManager : MonoBehaviour
                 
                 float y = (puzzle.transform.position.y + colliderCenter.y - colliderSize.y / 2) +
                           colliderSize.y / 2;
-                float xRight = puzzle.transform.position.x + colliderCenter.x + (colliderSize.x / 2 * -direction);
-                float xLeft = puzzle.transform.position.x + colliderCenter.x + (colliderSize.x / 2 * direction);
+                float xRight = puzzle.transform.position.x + colliderCenter.x + colliderSize.x / 2 * -direction;
+                float xLeft = puzzle.transform.position.x + colliderCenter.x + colliderSize.x / 2 * direction;
                 
                 rayLeft = new Ray(new Vector2(xLeft, y), new Vector2(-direction, 0));
                 rayRight = new Ray(new Vector2(xRight, y), new Vector2(direction, 0));
@@ -123,25 +123,20 @@ public class PuzzleGameManager : MonoBehaviour
                 Debug.DrawRay(rayRight.origin, rayRight.direction);
 
 
-                if (!Physics.Raycast(rayUp, out hit, 1.0f, collisionMask) && !puzzle.moved && (puzzle.transform.position.y < startPosition.y))
+                if (Physics.Raycast(rayUp, out hit, 1.0f, collisionMask) == false && !puzzle.moved && puzzle.transform.position.y < startPosition.y)
                 {
                     Debug.Log("Moved Up");
                     puzzle.goUp = true;
                 }
-                
-                if (!Physics.Raycast(rayDown, out hit, 1, collisionMask) && !puzzle.moved && (puzzle.transform.position.y > (startPosition.y - 3 * offset.y)))
+                else if (Physics.Raycast(rayDown, out hit, 1.0f, collisionMask) == false && !puzzle.moved && (puzzle.transform.position.y > (startPosition.y - 3 * offset.y)))
                 {
                     Debug.Log("Moved Down");
                     puzzle.goDown = true;
-                }
-                
-                if (!Physics.Raycast(rayLeft, out hit, 1, collisionMask) && !puzzle.moved && (puzzle.transform.position.x > startPosition.x))
+                }else if (Physics.Raycast(rayLeft, out hit, 1.0f, collisionMask) == false && !puzzle.moved && (puzzle.transform.position.x > startPosition.x))
                 {
                     Debug.Log("Moved Left");
                     puzzle.goLeft = true;
-                }
-                
-                if (!Physics.Raycast(rayRight, out hit, 1, collisionMask) && !puzzle.moved && (puzzle.transform.position.x < (startPosition.x + 3 * offset.x)))
+                } else if (Physics.Raycast(rayRight, out hit, 1.0f, collisionMask) == false && !puzzle.moved && (puzzle.transform.position.x < (startPosition.x + 3 * offset.x)))
                 {
                     Debug.Log("Moved Right");
                     puzzle.goRight = true;
