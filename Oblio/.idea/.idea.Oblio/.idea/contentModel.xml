@@ -31,6 +31,7 @@
           <e p="PuzzleControl.cs" t="Include" />
           <e p="PuzzleGame.cs" t="Include" />
           <e p="PuzzleGameManager.cs" t="Include" />
+          <e p="ResetGame.cs" t="Include" />
           <e p="SceneManaging.cs" t="Include" />
           <e p="TouchRotate.cs" t="Include" />
           <e p="UIFader.cs" t="Include" />

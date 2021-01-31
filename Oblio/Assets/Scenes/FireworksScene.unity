@@ -1171,6 +1171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firework: {fileID: 1979508140458857832, guid: adfd237f5dd414845ad072cbe2a9f4e2, type: 3}
   canvas: {fileID: 611067793}
+  winPanel: {fileID: 1027996199}
   elliesText: {fileID: 2014363025}
   carlsText: {fileID: 919999100}
   song: {fileID: 1232077115}

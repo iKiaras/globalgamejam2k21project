@@ -99,12 +99,14 @@ public class PuzzleControl : MonoBehaviour
     {
         if (youWin && textFinished)
         {
+            PlayerPrefs.SetInt("thirdStageClear",1);
+            PlayerPrefs.Save();
             winPanel.SetActive(true);
         }
     }
     
     public void returnToMenu()
     {
-        SceneManager.LoadScene("MiniGameMenu" , LoadSceneMode.Single);
+        SceneManager.LoadScene("HospitalScene" , LoadSceneMode.Single);
     }
 }

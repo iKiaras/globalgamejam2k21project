@@ -29,6 +29,7 @@
       <Path>UserSettings</Path>
       <Path>build</Path>
       <Path>obj</Path>
+      <Path>oblioBuild</Path>
     </explicitExcludes>
   </component>
 </project>

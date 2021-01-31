@@ -9,6 +9,7 @@ public class FireworkGamePlayerInfo : MonoBehaviour
 {
     [SerializeField] private GameObject firework;
     [SerializeField] private GameObject canvas;
+    [SerializeField] private GameObject winPanel;
     [SerializeField] private Text elliesText;
     [SerializeField] private Text carlsText;
     [SerializeField] private AudioSource song;
@@ -28,6 +29,7 @@ public class FireworkGamePlayerInfo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        checkWin();
         checkText();
         scoreText.text = score.ToString();
     }
@@ -169,5 +171,15 @@ public class FireworkGamePlayerInfo : MonoBehaviour
     public void restartScene()
     {
         SceneManager.LoadScene("DanceMiniGame" , LoadSceneMode.Single);
+    }
+
+    private void checkWin()
+    {
+        if (score >= 730)
+        {
+            winPanel.SetActive(true);
+            PlayerPrefs.SetInt("secondStageClear",1);
+            PlayerPrefs.Save();
+        }
     }
 }

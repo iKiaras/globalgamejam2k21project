@@ -14,6 +14,7 @@ public class DanceGamePlayerInfo : MonoBehaviour
     [SerializeField] private AudioSource song;
     [SerializeField] private GameObject winPanel;
     [SerializeField] private GameObject lossPanel;
+    [SerializeField] private GameObject notes;
     private bool elliesTextShown = false;
     private bool carlsTextShown = false;
     private bool isLoopPlaying = false;
@@ -170,6 +171,8 @@ public class DanceGamePlayerInfo : MonoBehaviour
 
         if (score >= 720)
         {
+            Destroy(notes);
+            song.Stop();
             winPanel.SetActive(true);
             PlayerPrefs.SetInt("firstStageClear", 1);
             PlayerPrefs.Save();
@@ -178,7 +181,7 @@ public class DanceGamePlayerInfo : MonoBehaviour
 
     public void returnToMenu()
     {
-        SceneManager.LoadScene("MiniGameMenu" , LoadSceneMode.Single);
+        SceneManager.LoadScene("HospitalScene" , LoadSceneMode.Single);
     }
 
     public void restartScene()
