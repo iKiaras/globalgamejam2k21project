@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class FireworkGamePlayerInfo : MonoBehaviour
@@ -10,6 +12,7 @@ public class FireworkGamePlayerInfo : MonoBehaviour
     [SerializeField] private Text elliesText;
     [SerializeField] private Text carlsText;
     [SerializeField] private AudioSource song;
+    [SerializeField] private Text scoreText;
     private static int score = 0;
     private bool elliesTextShown = false;
     private bool carlsTextShown = false;
@@ -17,58 +20,60 @@ public class FireworkGamePlayerInfo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        score = 0;
         StartCoroutine(spawnFireworks());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        checkText();
+        scoreText.text = score.ToString();
     }
     
-     private void checkText() //TODO FIX DIALOG
+     private void checkText() 
     {
         if (score >= 700 && score > 670 && !carlsTextShown)
         {
             StartCoroutine(FadeTextToZeroAlpha(elliesText));
             elliesTextShown = false;
             carlsTextShown = true;
-            carlsText.text = "I love you too....";
+            carlsText.text = "Trust me, everything is gonna be fine.";
             StartCoroutine(FadeTextToFullAlpha(carlsText));
         } else if (score <= 640 && score > 610 && !elliesTextShown)
         {
             StartCoroutine(FadeTextToZeroAlpha(carlsText));
             carlsTextShown = false;
             elliesTextShown = true;
-            elliesText.text = " ….I love you...";
+            elliesText.text = "No they are not... I don't know if we can make it through!";
             StartCoroutine(FadeTextToFullAlpha(elliesText));
         } else if (score <= 580 && score > 550 && !carlsTextShown)
         {
             StartCoroutine(FadeTextToZeroAlpha(elliesText));
             elliesTextShown = false;
             carlsTextShown = true;
-            carlsText.text = "We will close our eyes and we will hardwire this memory to our brains, in this way as long as we are alive we can live this moment again and again!";
+            carlsText.text = "That's great news!!";
             StartCoroutine(FadeTextToFullAlpha(carlsText));
         } else if (score <= 520 && score > 490 && !elliesTextShown)
         {
             StartCoroutine(FadeTextToZeroAlpha(carlsText));
             carlsTextShown = false;
             elliesTextShown = true;
-            elliesText.text = "Oh I love magic tricks! Tell me!";
+            elliesText.text = "Yeah, really... And I am scared.";
             StartCoroutine(FadeTextToFullAlpha(elliesText));
         } else if (score <= 460 && score > 430 && !carlsTextShown)
         {
             StartCoroutine(FadeTextToZeroAlpha(elliesText));
             elliesTextShown = false;
             carlsTextShown = true;
-            carlsText.text = "I'll tell you what, we will do a magic trick.";
+            carlsText.text = "What?? Really???";
             StartCoroutine(FadeTextToFullAlpha(carlsText));
         } else if (score <= 400 && score > 370 && !elliesTextShown)
         {
             StartCoroutine(FadeTextToZeroAlpha(carlsText));
             carlsTextShown = false;
             elliesTextShown = true;
-            elliesText.text = "hahahaha";
+            elliesText.text = "I am pregnant...";
             StartCoroutine(FadeTextToFullAlpha(elliesText));
         }
         else if (score <= 340 && score > 310 && !carlsTextShown)
@@ -76,41 +81,41 @@ public class FireworkGamePlayerInfo : MonoBehaviour
             StartCoroutine(FadeTextToZeroAlpha(elliesText));
             elliesTextShown = false;
             carlsTextShown = true;
-            carlsText.text = "Me too, or until I feel excruciating pain from my feet, which I think it will be in the next 10 minutes.";
+            carlsText.text = "What is it? I am getting worried...";
             StartCoroutine(FadeTextToFullAlpha(carlsText));
         }else if (score <= 280 && score > 250 && !elliesTextShown)
         {
             StartCoroutine(FadeTextToZeroAlpha(carlsText));
             carlsTextShown = false;
             elliesTextShown = true;
-            elliesText.text = "I hope this dance lasts forever!";
+            elliesText.text = "I don't know if I can say it...";
             StartCoroutine(FadeTextToFullAlpha(elliesText));
         }else if (score <= 210 && score > 180 && !carlsTextShown)
         {
             StartCoroutine(FadeTextToZeroAlpha(elliesText));
             carlsTextShown = true;
             elliesTextShown = false;
-            carlsText.text = "They will be the best!";
+            carlsText.text = "What is it?";
             StartCoroutine(FadeTextToFullAlpha(carlsText));
         }else if (score <= 150 && score > 120 && !elliesTextShown)
         {
             StartCoroutine(FadeTextToZeroAlpha(carlsText));
             carlsTextShown = false;
             elliesTextShown = true;
-            elliesText.text = "Oh am I? I really hope that are at least good.";
+            elliesText.text = "Happy new year... baby... I have something to tell you...";
             StartCoroutine(FadeTextToFullAlpha(elliesText));
         }else if (score <= 90 && score > 60 && !carlsTextShown)
         {
             StartCoroutine(FadeTextToZeroAlpha(elliesText));
             carlsTextShown = true;
             elliesTextShown = false;
-            carlsText.text = "There are many things you don't know about me!";
+            carlsText.text = "Happy new year baby!";
             StartCoroutine(FadeTextToFullAlpha(carlsText));
         }else if (score == 30 && !elliesTextShown)
         {
             carlsTextShown = false;
             elliesTextShown = true;
-            elliesText.text = "Who would imagine that you are such a good dancer.";
+            elliesText.text = "3,2,1... HAPPY NEW YEAR.";
             StartCoroutine(FadeTextToFullAlpha(elliesText));
         }
 
@@ -139,8 +144,7 @@ public class FireworkGamePlayerInfo : MonoBehaviour
 
     IEnumerator spawnFireworks()
     {
-
-        while (score < 100)
+        while (score < 730)
         {
             var randomPosition = new Vector3(Random.Range(-5.60f, 5.60f), -6.55f, 0f);
             GameObject fireworkInstantiate = Instantiate(firework, randomPosition, Quaternion.identity);
@@ -148,11 +152,20 @@ public class FireworkGamePlayerInfo : MonoBehaviour
             fireworkInstantiate.transform.localScale = Vector3.one;
             yield return new WaitForSeconds(Random.Range(1f, 3f));
         }
-
     }
     
     public static void AddScore()
     {
-        score+=10;
+        score+=15;
+    }
+    
+    public void returnToMenu()
+    {
+        SceneManager.LoadScene("MiniGameMenu" , LoadSceneMode.Single);
+    }
+
+    public void restartScene()
+    {
+        SceneManager.LoadScene("DanceMiniGame" , LoadSceneMode.Single);
     }
 }

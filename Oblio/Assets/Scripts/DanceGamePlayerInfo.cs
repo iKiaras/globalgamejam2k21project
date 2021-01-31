@@ -33,7 +33,7 @@ public class DanceGamePlayerInfo : MonoBehaviour
         scoreText.text = score.ToString();
         checkText();
         checkLoop();
-        
+        checkWinCondition();
     }
 
     private void checkLoop()
@@ -171,6 +171,8 @@ public class DanceGamePlayerInfo : MonoBehaviour
         if (score >= 720)
         {
             winPanel.SetActive(true);
+            PlayerPrefs.SetInt("firstStageClear", 1);
+            PlayerPrefs.Save();
         }
     }
 

@@ -20,7 +20,7 @@ public class FireworkScript : MonoBehaviour
 
     private void moveUpwards()
     {
-        _rigidbody2D.velocity = new Vector2(0,Random.Range(3,6));
+        _rigidbody2D.velocity = new Vector2(0,Random.Range(4,8));
     }
 
     public void OnMouseDown()
