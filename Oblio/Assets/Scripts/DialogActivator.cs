@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogActivator : MonoBehaviour
 {
@@ -17,9 +18,9 @@ public class DialogActivator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_canActivate && Input.GetMouseButtonDown(0) && !DialogManager.getInstance().isDialogBoxActive())
+        if (_canActivate && (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)))
         {
-            DialogManager.getInstance().ShowDialog(lines, isPerson);
+            SceneManager.LoadScene("MiniGameMenu" , LoadSceneMode.Single);
         }
     }
 

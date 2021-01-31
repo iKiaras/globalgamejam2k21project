@@ -12,6 +12,7 @@ public class FireworkGamePlayerInfo : MonoBehaviour
     [SerializeField] private Text elliesText;
     [SerializeField] private Text carlsText;
     [SerializeField] private AudioSource song;
+    [SerializeField] private AudioSource spawnSound;
     [SerializeField] private Text scoreText;
     private static int score = 0;
     private bool elliesTextShown = false;
@@ -150,7 +151,8 @@ public class FireworkGamePlayerInfo : MonoBehaviour
             GameObject fireworkInstantiate = Instantiate(firework, randomPosition, Quaternion.identity);
             fireworkInstantiate.transform.parent = canvas.transform;
             fireworkInstantiate.transform.localScale = Vector3.one;
-            yield return new WaitForSeconds(Random.Range(1f, 3f));
+            spawnSound.Play();
+            yield return new WaitForSeconds(Random.Range(1f, 4f));
         }
     }
     
