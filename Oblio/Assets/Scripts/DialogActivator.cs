@@ -8,7 +8,6 @@ public class DialogActivator : MonoBehaviour
     [SerializeField] private List<string> lines;
     [SerializeField] private bool isPerson = true;
     private bool _canActivate;
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +17,7 @@ public class DialogActivator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_canActivate && Input.GetButtonDown("Fire1") && !DialogManager.getInstance().isDialogBoxActive())
+        if (_canActivate && Input.GetMouseButtonDown(0) && !DialogManager.getInstance().isDialogBoxActive())
         {
             DialogManager.getInstance().ShowDialog(lines, isPerson);
         }

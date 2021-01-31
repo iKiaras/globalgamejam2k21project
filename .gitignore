@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
@@ -5,3 +6,6 @@
 /.vs
 /Oblio/.vs/Oblio/v16
 /Oblio/.vsconfig
+=======
+﻿/Oblio/Library/
+>>>>>>> 2fb8c07ebe64bd09e999903e4a520a921abe876a
