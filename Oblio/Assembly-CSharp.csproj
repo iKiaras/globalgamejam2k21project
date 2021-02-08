@@ -52,6 +52,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\FireworkGamePlayerInfo.cs" />
      <Compile Include="Assets\Scripts\DanceMoveActivator.cs" />
+     <Compile Include="Assets\Scripts\PuzzleControl.cs" />
+     <Compile Include="Assets\Scripts\TouchRotate.cs" />
      <Compile Include="Assets\Scripts\PuzzleGame.cs" />
      <Compile Include="Assets\Scripts\ColorChange.cs" />
      <Compile Include="Assets\Scripts\Notes.cs" />
@@ -59,12 +61,10 @@
      <Compile Include="Assets\Scripts\PuzzleGameManager.cs" />
      <Compile Include="Assets\Scripts\DialogActivator.cs" />
      <Compile Include="Assets\Scripts\SceneManaging.cs" />
+     <Compile Include="Assets\Scripts\PlayerController2.cs" />
      <Compile Include="Assets\Scripts\DanceGamePlayerInfo.cs" />
      <Compile Include="Assets\Scripts\CharacterStats.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\PlayerController2.cs" />
-     <Compile Include="Assets\Scripts\TouchRotate.cs" />
-     <Compile Include="Assets\Scripts\PuzzleControl.cs" />
      <Compile Include="Assets\Scripts\ResetGame.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -91,6 +91,9 @@
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/Unity/Unity Projects/globalgamejam2k21project/Oblio/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEngine.Monetization">
+ <HintPath>D:/Unity/Unity Projects/globalgamejam2k21project/Oblio/Library/ScriptAssemblies/UnityEngine.Monetization.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.2D.Animation.Runtime">
  <HintPath>D:/Unity/Unity Projects/globalgamejam2k21project/Oblio/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
  </Reference>
@@ -100,8 +103,17 @@
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>D:/Unity/Unity Projects/globalgamejam2k21project/Oblio/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>D:/Unity/Unity Projects/globalgamejam2k21project/Oblio/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.2D.SpriteShape.Editor">
  <HintPath>D:/Unity/Unity Projects/globalgamejam2k21project/Oblio/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Purchasing">
+ <HintPath>D:/Unity/Unity Projects/globalgamejam2k21project/Oblio/Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Purchasing">
+ <HintPath>D:/Unity/Unity Projects/globalgamejam2k21project/Oblio/Library/ScriptAssemblies/UnityEditor.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>D:/Unity/Unity Projects/globalgamejam2k21project/Oblio/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -120,6 +132,9 @@
  </Reference>
  <Reference Include="PsdPlugin">
  <HintPath>D:/Unity/Unity Projects/globalgamejam2k21project/Oblio/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.XR.LegacyInputHelpers">
+ <HintPath>D:/Unity/Unity Projects/globalgamejam2k21project/Oblio/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
  <HintPath>D:/Unity/Unity Projects/globalgamejam2k21project/Oblio/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
@@ -151,6 +166,12 @@
  <Reference Include="Unity.2D.Animation.Editor">
  <HintPath>D:/Unity/Unity Projects/globalgamejam2k21project/Oblio/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEditor.SpatialTracking">
+ <HintPath>D:/Unity/Unity Projects/globalgamejam2k21project/Oblio/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpatialTracking">
+ <HintPath>D:/Unity/Unity Projects/globalgamejam2k21project/Oblio/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
  <HintPath>D:/Unity/Unity Projects/globalgamejam2k21project/Oblio/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
@@ -162,6 +183,12 @@
  </Reference>
  <Reference Include="Unity.2D.Common.Editor">
  <HintPath>D:/Unity/Unity Projects/globalgamejam2k21project/Oblio/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.DataPrivacy">
+ <HintPath>D:/Unity/Unity Projects/globalgamejam2k21project/Oblio/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.XR.LegacyInputHelpers">
+ <HintPath>D:/Unity/Unity Projects/globalgamejam2k21project/Oblio/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InternalAPIEditorBridge.001">
  <HintPath>D:/Unity/Unity Projects/globalgamejam2k21project/Oblio/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
@@ -357,6 +384,15 @@
  </Reference>
  <Reference Include="UnityEditor">
  <HintPath>D:/Unity Projects/2020.1.7f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.Editor">
+ <HintPath>D:/Unity/Unity Projects/globalgamejam2k21project/Oblio/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.Tracker">
+ <HintPath>D:/Unity/Unity Projects/globalgamejam2k21project/Oblio/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Tracker.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.StandardEvents">
+ <HintPath>D:/Unity/Unity Projects/globalgamejam2k21project/Oblio/Library/PackageCache/com.unity.analytics@3.3.5/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>D:/Unity/Unity Projects/globalgamejam2k21project/Oblio/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>

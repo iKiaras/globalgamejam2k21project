@@ -8,7 +8,6 @@
       <e p="Assets" t="Include">
         <e p="Licence.txt" t="Include" />
         <e p="Scripts" t="Include">
-          <e p="CameraController.cs" t="Include" />
           <e p="CharacterStats.cs" t="Include" />
           <e p="ColorChange.cs" t="Include" />
           <e p="DanceGamePlayerInfo.cs" t="Include" />
@@ -19,7 +18,6 @@
           <e p="Notes.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerController2.cs" t="Include" />
-          <e p="PlayerLoader.cs" t="Include" />
           <e p="PuzzleControl.cs" t="Include" />
           <e p="PuzzleGame.cs" t="Include" />
           <e p="PuzzleGameManager.cs" t="Include" />
